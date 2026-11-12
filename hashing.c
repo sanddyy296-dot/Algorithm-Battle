@@ -53,8 +53,15 @@ int main() {
         insert(students[i]);
 
     printf("Hashing with Linear Probing\n");
-    printf("Total Collisions: %d\n", collisions);
+    int newID;
 
+printf("Enter new Student ID: ");
+scanf("%d", &newID);
+
+insert(newID);
+
+printf("Student Inserted Successfully\n");
+printf("Updated Total Collisions: %d\n", collisions);
     printf("Enter Student ID to search: ");
     scanf("%d", &id);
 

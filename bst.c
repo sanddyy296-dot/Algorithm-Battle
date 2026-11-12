@@ -57,7 +57,7 @@ int height(struct Node* root) {
 
 int main() {
     struct Node* root = NULL;
-    int id, count;
+    int id, count, newID;
 
 int students[] = {
     105,102,108,101,103,107,110,104,106,109,
@@ -65,8 +65,17 @@ int students[] = {
     125,122,128,121,123,127,130,124,126,129,
     135,132,138,131,133,137,140,134,136,139
 };
-    for (int i = 0; i < 40; i++)
-        root = insert(root, students[i]);
+    printf("\nEnter new Student ID: ");
+scanf("%d", &newID);
+
+root = insert(root, newID);
+
+printf("Student Inserted Successfully\n");
+
+printf("Updated Inorder Traversal: ");
+inorder(root);
+
+printf("\nUpdated Tree Height: %d\n", height(root));
 
     printf("BST Student Records\n");
 

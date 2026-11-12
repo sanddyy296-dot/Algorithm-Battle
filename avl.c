@@ -120,10 +120,19 @@ int main() {
     135,132,138,131,133,137,140,134,136,139
 };
 
-    int id, count;
+    int id, count, newID;
 
-    for (int i = 0; i < 40; i++)
-        root = insert(root, students[i]);
+    printf("\nEnter new Student ID: ");
+scanf("%d", &newID);
+
+root = insert(root, newID);
+
+printf("Student Inserted Successfully\n");
+
+printf("Updated Inorder Traversal: ");
+inorder(root);
+
+printf("\nUpdated Tree Height: %d\n", height(root));
 
     printf("AVL Student Records\n");
 

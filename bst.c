@@ -59,12 +59,13 @@ int main() {
     struct Node* root = NULL;
     int id, count;
 
-    int students[] = {
-        105, 102, 108, 101, 103,
-        107, 110, 104, 106, 109
-    };
-
-    for (int i = 0; i < 10; i++)
+int students[] = {
+    105,102,108,101,103,107,110,104,106,109,
+    115,112,118,111,113,117,120,114,116,119,
+    125,122,128,121,123,127,130,124,126,129,
+    135,132,138,131,133,137,140,134,136,139
+};
+    for (int i = 0; i < 40; i++)
         root = insert(root, students[i]);
 
     printf("BST Student Records\n");

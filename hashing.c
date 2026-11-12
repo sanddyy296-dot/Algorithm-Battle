@@ -1,14 +1,13 @@
 
 #include <stdio.h>
 
-#define SIZE 20
+#define SIZE 50
 
 int hashTable[SIZE];
-
 int collisions = 0;
 
 void insert(int id) {
-    int index = id % SIZE;
+    int index = id % 10;
 
     while (hashTable[index] != -1) {
         collisions++;
@@ -19,7 +18,7 @@ void insert(int id) {
 }
 
 int search(int id, int *count) {
-    int index = id % SIZE;
+    int index = id % 10;
     int start = index;
 
     while (hashTable[index] != -1) {
@@ -37,19 +36,12 @@ int search(int id, int *count) {
     return 0;
 }
 
-void display() {
-    printf("\nHash Table:\n");
-
-    for (int i = 0; i < SIZE; i++) {
-        if (hashTable[i] != -1)
-            printf("%d : %d\n", i, hashTable[i]);
-    }
-}
-
 int main() {
     int students[] = {
-        105, 102, 108, 101, 103,
-        107, 110, 104, 106, 109
+        105,102,108,101,103,107,110,104,106,109,
+        115,112,118,111,113,117,120,114,116,119,
+        125,122,128,121,123,127,130,124,126,129,
+        135,132,138,131,133,137,140,134,136,139
     };
 
     int id, count = 0;
@@ -57,24 +49,21 @@ int main() {
     for (int i = 0; i < SIZE; i++)
         hashTable[i] = -1;
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 40; i++)
         insert(students[i]);
 
     printf("Hashing with Linear Probing\n");
+    printf("Total Collisions: %d\n", collisions);
 
-    display();
-
-    printf("\nTotal Collisions: %d", collisions);
-
-    printf("\nEnter Student ID to search: ");
+    printf("Enter Student ID to search: ");
     scanf("%d", &id);
 
     if (search(id, &count))
-        printf("Student Found");
+        printf("Student Found\n");
     else
-        printf("Student Not Found");
+        printf("Student Not Found\n");
 
-    printf("\nNumber of Comparisons: %d\n", count);
+    printf("Number of Comparisons: %d\n", count);
 
     return 0;
 }

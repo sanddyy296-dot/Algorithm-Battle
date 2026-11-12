@@ -1,0 +1,30 @@
+ALGORITHM BATTLE - EXPERIMENT RESULTS
+
+Application: Student Record Search System
+Dataset: 40 Unique Student IDs
+Programming Language: C
+
+Test Inputs:
+Successful Search: 105
+Unsuccessful Search: 999
+New Insertion: 150
+
+1. BINARY SEARCH TREE (BST)
+Inorder Traversal: [Enter actual output]
+Tree Height: [Enter actual output]
+Successful Search Comparisons: [Enter actual output]
+Unsuccessful Search Comparisons: [Enter actual output]
+
+2. AVL TREE
+Inorder Traversal: [Enter actual output]
+Tree Height: [Enter actual output]
+Successful Search Comparisons: [Enter actual output]
+Unsuccessful Search Comparisons: [Enter actual output]
+
+3. HASHING WITH LINEAR PROBING
+Total Collisions: [Enter actual output]
+Successful Search Comparisons: [Enter actual output]
+Unsuccessful Search Comparisons: [Enter actual output]
+
+Insertion:
+New Student ID: 150

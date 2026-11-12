@@ -39,4 +39,24 @@ C
 
 ## Conclusion
 The three data structures are implemented and tested using the same student dataset. Their performance is compared based on searching, insertion, tree height and collisions.
+## Algorithm Battle – Final Analysis
+
+### BST
+BST supports insertion and searching. Its performance depends on the structure and height of the tree.
+
+### AVL Tree
+AVL maintains a balanced tree using rotations. It provides efficient searching and insertion.
+
+### Hashing
+Hashing uses Linear Probing to resolve collisions. It provides fast searching when collisions are low.
+
+## Final Recommendation
+
+AVL Tree is a suitable choice when predictable searching performance is required because it maintains a balanced tree.
+
+Hashing can also provide faster average searching when a good hash function is used and collisions are minimized.
+
+## Conclusion
+
+This project compares BST, AVL Tree and Hashing using the same student dataset. The experiment demonstrates how different data structures handle insertion, searching and storage.
 
